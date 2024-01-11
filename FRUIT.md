@@ -118,4 +118,12 @@ Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 - Gold Dataset으로 평가된 결과
 - Copy Source 방법 보다 Evidence를 함께 입력해주는 것이 더 좋은 성능
 - Baseline model T5보다 EDIT5모델이 전체적으로 더 좋은 성능
-- Unsupported Entity Tokens이 더 적은 것으로 보아 hallucinates 현상이 더 적은 것을 의미.
+- Unsupported Entity Tokens이 더 적은 것으로 보아 hallucinates 현상이 더 적은 것을 의미.<br/>
+
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/d7d3a524-1feb-4911-ad09-c49989d4c74e)<br/>
+- 잘못된 날짜를 반영한 모습<br/>
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/bbf26961-4c77-4618-b382-464fe446a990)<br/>
+- EDIT5의 오류 유형을 파악하기 위해 Gold, Silver Dataset에서 100개의 무작위 예측
+- 숫자와 날짜, hallucinates, 
+
+
