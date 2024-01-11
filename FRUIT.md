@@ -36,3 +36,14 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
 
 이 task를 수행하기 위해선 모델은 어떤 새로운 정보(Evidence)가 원본 텍스트와 모순되는지, 주제에 대해 새로운 중요한 정보를 도입하는지 식별 능력 필요 <br />
 이를 통해 기존의 텍스트를 수정할지 새로운 텍스트를 추가할지 선택할 수 있다.
+
+### **2.2 Evaluation**
+- **Evaluate on Updated Text**
+    - 업데이트 된 텍스트의 경우 원본 텍스트와 많은 중복이 있을 수 있다. ROUGE(Lin, 2004)와 같은 메트릭으로 평가한다면 어떠한 업데이트를 수행하지 않고 높은 점수를 얻을 수 있다.
+    - FRUIT 시스템을 평가하기 위해 UpdateROUGE를 제안.
+    - 전체 텍스트가 아닌 업데이트된 문장만을 고려.
+- **Evaluate Faithfulness**
+    - 생성된 내용이 Evidence와 업데이트된 기사의 정보를 얼마나 정확하게 반영하는지 평가하는 방법
+    - **Entity Token Overlap**
+        - 생성된 Output과 원본 기사,새로운 정보(Evidence)에 나타나는 Named Entity간의 토큰 중복을 측정
+        - 생성된 내용이 원본 기사, 새로운정보에 포함된 개체와 일치하는 정도를 나타냄.
