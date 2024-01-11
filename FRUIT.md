@@ -27,9 +27,12 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
  
 ## 2. The FRUIT Task
 
-**2.1 Task Definition**
+### **2.1 Task Definition**
 원본 텍스트에 대한 새로운 정보의 컬렉션이 주어지는 경우,목표는 원본 텍스트를 새로운 정보를 반영하도록 업데이트하는 것. <br />
 - 특정 주제 $A$에 대해 시점 $t,t'$에 작성된 텍스트 쌍 $A^t, A^{t'}$<br />
 - t 시점과 t' 사이의 새로운 정보,즉 Evidence $\mathcal{E}^{t \rightarrow t'} = {E_1, .. E_{|\mathcal{E}|}}$ <br />
 - 새로운 증거는 구조화된 객체와 그렇지 않은 텍스트가 포함될 수 있다.
 - $A^t$와 $\mathcal{E}^{t \rightarrow t'}$가 주어졌을 때, 업데이트 된 $A^{t'}$를 생성하는 것이 목표
+
+이 task를 수행하기 위해선 먼저, 모델은 어떤 새로운 정보(Evidence)가 원본 텍스트와 모순되는지, 주제에 대해 새로운 중요한 정보를 도입하는지 식별가능해야 한다. <br />
+이를 통해 기존의 텍스트를 수정할지 새로운 텍스트를 추가할지 선택할 수 있다.
