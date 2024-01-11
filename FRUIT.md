@@ -44,6 +44,5 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
     - 전체 텍스트가 아닌 업데이트된 문장만을 고려.
 - **Evaluate Faithfulness**
     - 생성된 내용이 Evidence와 업데이트된 기사의 정보를 얼마나 정확하게 반영하는지 평가하는 방법
-    - **Entity Token Overlap**
-        - 생성된 Output과 원본 기사,새로운 정보(Evidence)에 나타나는 Named Entity간의 토큰 중복을 측정
-        - 생성된 내용이 원본 기사, 새로운정보에 포함된 개체와 일치하는 정도를 나타냄.
+    - **Unsupported Entity Tokens**
+        - 생성된 Output에서 나타나는 Named Entity 중, 원본 텍스트,새로운 정보에는 없는 Named Entity의 평균 수를 측정: 높으면 신뢰성이 낮음.
