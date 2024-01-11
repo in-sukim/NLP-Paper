@@ -131,5 +131,5 @@ Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 - 모델에게 문장 추가,복사,편집,제거할 것인지 추가나 편집 시 어떤 증거를 사용할 것인지 지시
 - 모든 지표에서 10% 정도의 성능 향상
 
-
-
+**Appendix: Ablation Study**<br/>
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/6972f224-8703-445c-a841-812ca98fde5e)
