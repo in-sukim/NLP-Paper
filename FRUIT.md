@@ -30,7 +30,7 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
 ### **2.1 Task Definition**
 원본 텍스트에 대한 새로운 정보의 컬렉션이 주어지는 경우,목표는 원본 텍스트를 새로운 정보를 반영하도록 업데이트하는 것. <br />
 - 특정 주제 $A$에 대해 시점 $t,t'$에 작성된 텍스트 쌍 $A^t, A^{t'}$<br />
-- t 시점과 t' 사이의 새로운 정보,즉 Evidence $\mathcal{E}^{t \rightarrow t'} = {E_1, .. E_{|\mathcal{E}|}}$ <br />
+- t 시점과 t' 사이의 새로운 정보를 입증하는 데 사용되는 증거 조각,즉 Evidence $\mathcal{E}^{t \rightarrow t'} = {E_1, .. E_{|\mathcal{E}|}}$ <br />
 - 새로운 증거는 구조화된 객체와 그렇지 않은 텍스트가 포함될 수 있다.
 - $A^t$와 $\mathcal{E}^{t \rightarrow t'}$가 주어졌을 때, 업데이트 된 $A^{t'}$를 생성하는 것이 목표
 
@@ -49,6 +49,32 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
     - **Entity Precision and Recall**
         - **Entity Precision**
             - 생성된 텍스트에 포함된 Named Entity들이 원본 텍스트,새로운 정보에 실제로 존재하는지 측정
-            - 높은 정밀도는 텍스트 내의 Named Entity들이 원본 텍스트와 잘 일치함을 의미
+            - 높은 정밀도는 생성된 텍스트 내의 Named Entity들이 원본 텍스트와 잘 일치함을 의미
         - **Entity Recall**
-            - 원본 텍스트에 있는 Named Entity들이 
+            - 원본 텍스트에 있는 Named Entity들이 생성된 텍스트에 잘 포함되어 있는지 나타낸다.
+            - 높은 재현율은 원본 텍스트의 Named Entity를 생성된 텍스트에서 잘 포함하고 있음을 의미.
+- **Parametric Knowledge Consideration**
+    - FRUIT 시스템은 훈련 데이터에서 배운 정보에 의존하는 것이 아니라, 주어진 새로운 정보를 바탕으로 판단해야 한다.
+    - 즉, 훈련 중에 얻는 Parametric Knowledge를 넘어서, 실제로 제공된 정보와 최신 정보를 분석하고 통합하는 능력을 가져야 한다.
+
+## 3. Dataset Collection and Analysis
+FRUIT-WIKI 데이터셋과 관련된 데이터 수집 파이프라인.
+
+### 3.1 Pipeline
+Wikipedia 스냅샷 쌍으로부터 annotated training, evalutaion 데이터 생성.
+#### Step 1.
+source(원본 텍스트)과 target(새로운 정보)에 나타난 문서의 서론을 포함한 다른 부분의 변경 사항을 찾기 위해 분석($\mathcal{E}^{t \rightarrow t'})$<br />
+텍스트 내의 문장 형태뿐만 아니라 새로운 테이블, 목록 등의 형태로 나타날 수 있다. Wikipedia 하이퍼링크를 사용하여 개체를 구분.
+
+#### Step 2.
+새로운 정보의 추가 없이 기존 정보를 스타일적인 업데이트만 한 경우 분석에서 제외. 예를 들어 새로운 내용 추가 없이 문장을 다시 쓰는 것, 문법 수정, 형식 변경 등.
+
+#### Step 3.
+Step 1에서 식별된 변경 사항을 검증하는 단계. 이를 통해 FRUIT-WIKI 데이터셋의 신뢰성을 유지하는데 도움이 된다.
+업데이트 된 문장 $a \in A^{t'}$에 추가된 개체 $s'$가 포함된 경우, $s'$가 증거 조각 $\mathcal{E}^{t \rightarrow t'}$에서도 언급된 경우에만 a가 $\mathcal{E}$의 증거 조각에 의해 입증된다. 업데이트된 문장에 추가된 개체가 어떤 증거에 언급되는지 확인하여 문장을 검증.
+
+### 3.2 FRUIT-WIKI
+훈련 데이터셋: 2019년 11월 20일 ~ 2020년 11월 20일. <br />
+평가 데이터셋: 2020년 11월 20일 ~ 2021년 6월 1일. <br />
+- 평균적으로, 각 문서당 약 3~4개의 업데이트가 있으며, 연관된 증거 조각은 약 7개 정도. 업데이트의 약 80%는 업데이트를 수행할 때 일부 증거를 무시하는 형태의 콘텐츠 선택이 필요. <br />
+- 증거 조각에 의해 입증되지 않은 추가된 정보를 모델이 학습 시 hallucinate를 일으킬 수 있기 때문에 human annotations과 평가 메트릭을 사용하여 이 문제가 어느정도인지 연구.
