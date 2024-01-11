@@ -113,3 +113,9 @@ Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 - 참조 토큰들은 평가지표를 계산하기 전 모델의 출력 텍스트에서 제거.<br />
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/bc6e6da5-da5f-4cac-b8ba-c49cd2554566)<br/>
 
+## 5. Results and Analysis
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/c2a2ae81-a87c-4577-96cd-42224c3a3a9b)<br/>
+- Gold Dataset으로 평가된 결과
+- Copy Source 방법 보다 Evidence를 함께 입력해주는 것이 더 좋은 성능
+- Baseline model T5보다 EDIT5모델이 전체적으로 더 좋은 성능
+- Unsupported Entity Tokens이 더 적은 것으로 보아 hallucinates 현상이 더 적은 것을 의미.
