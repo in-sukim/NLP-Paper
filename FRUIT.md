@@ -88,7 +88,13 @@ STEM: Science, Technology, Engineering, Mathematics(과학, 기술, 공학, 수�
 - 소스 기사, 증거, 그리고 목표 기사의 각 업데이트된 문장을 검토하도록 지시(Figure A7 Instructions 참고) <br />
 - 원문 텍스트, 추가된 정보 변경 수정 불가, 업데이트된 정보를 주석으로 강조, 업데이트 된 텍스트 복사 후 기존 문서를 최소한으로 편집. <br />
 - 작업 초기 단계에는 정기적인 피드백과 30분의 훈련. 다른 annotator의 작업을 점검하고 오류를 수정하는 인원 추가 고용
-- 약 500시간 작업 투입.
+- 약 500시간 작업 투입.<br/>
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/95a96a0e-4005-4a72-a84d-4adce64f52ab)<br />
-ROUGE-1은 시스템 요약본과 참조 요약본 간 겹치는 unigram의 수를 보는 지표이며, ROUGE-2는 시스템 요약본과 참조 요약본 간 겹치는 bigram의 수를 보는 지표
+ROUGE-1:시스템 요약본과 참조 요약본 간 겹치는 unigram의 수를 보는 지표,ROUGE-2:시스템 요약본과 참조 요약본 간 겹치는 bigram의 수를 보는 지표<br />
+ROUGE-N: unigram, bigram, trigram 등 문장 간 중복되는 n-gram을 비교하는 지표
 
+## 4.Method
+Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
+### 4.1 Copy Baselines
+- **Copy Source**
+- **Copy Source + Evidence**
