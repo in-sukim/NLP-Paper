@@ -74,9 +74,21 @@ Step 1에서 식별된 변경 사항을 검증하는 단계. 이를 통해 FRUIT
 업데이트 된 문장 $a \in A^{t'}$에 추가된 개체 $s'$가 포함된 경우, $s'$가 증거 조각 $\mathcal{E}^{t \rightarrow t'}$에서도 언급된 경우에만 a가 $\mathcal{E}$의 증거 조각에 의해 입증된다. <br/>업데이트된 문장에 추가된 개체가 어떤 증거에 언급되는지 확인하여 문장을 검증.
 
 ### 3.2 FRUIT-WIKI
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/dabf61cf-8153-4ef5-85b8-70e1ccac51f1)<br/>
 훈련 데이터셋: 2019년 11월 20일 ~ 2020년 11월 20일. <br />
 평가 데이터셋: 2020년 11월 20일 ~ 2021년 6월 1일. <br />
 - 평균적으로, 각 문서당 약 3~4개의 업데이트가 있으며, 연관된 증거 조각은 약 7개 정도. 업데이트의 약 80%는 업데이트를 수행할 때 일부 증거를 무시하는 형태의 콘텐츠 선택이 필요. <br />
 - 증거 조각에 의해 입증되지 않은 추가된 정보를 모델이 학습 시 hallucinate를 일으킬 수 있기 때문에 human annotations과 평가 메트릭을 사용하여 이 문제가 어느정도인지 연구.<br />
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/acb1ddae-8e52-48bc-bf0d-8ca0ec741283) <br />
-Topic model(Asthana and Halfaker, 2018)을 통해 데이터셋의 기사를 분류했을 때, 분포.
+Topic model(Asthana and Halfaker, 2018)을 통해 업데이트 된 데이터셋의 기사를 분류했을 때, 분포. <br/>
+STEM: Science, Technology, Engineering, Mathematics(과학, 기술, 공학, 수학)
+
+### 3.3 Gold Evaluation Data
+- 9명의 annotators로 구성된 팀을 통해 생성. 914개의 update-evidence pair에 대한 annotation 수집<br/>
+- 소스 기사, 증거, 그리고 목표 기사의 각 업데이트된 문장을 검토하도록 지시(Figure A7 Instructions 참고) <br />
+- 원문 텍스트, 추가된 정보 변경 수정 불가, 업데이트된 정보를 주석으로 강조, 업데이트 된 텍스트 복사 후 기존 문서를 최소한으로 편집. <br />
+- 작업 초기 단계에는 정기적인 피드백과 30분의 훈련. 다른 annotator의 작업을 점검하고 오류를 수정하는 인원 추가 고용
+- 약 500시간 작업 투입.
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/95a96a0e-4005-4a72-a84d-4adce64f52ab)<br />
+ROUGE-1은 시스템 요약본과 참조 요약본 간 겹치는 unigram의 수를 보는 지표이며, ROUGE-2는 시스템 요약본과 참조 요약본 간 겹치는 bigram의 수를 보는 지표
+
