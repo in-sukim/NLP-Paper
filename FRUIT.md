@@ -96,5 +96,5 @@ ROUGE-N: unigram, bigram, trigram 등 문장 간 중복되는 n-gram을 비교�
 ## 4.Method
 Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 ### 4.1 Copy Baselines
-- **Copy Source**
-- **Copy Source + Evidence**
+- **Copy Source**: 원본 기사 생성.
+- **Copy Source + Evidence**: 원본 기사 + 증거 조합. 구조화되지 않지 않은 테이블의 텍스트 데이터를 변환하기 위해 전통적인 선형화 방법(Lebret et al., 2016; Wiseman et al., 2017)을 적용. 행과 열 구분자를 사용하여 테이블 항목 분리.
