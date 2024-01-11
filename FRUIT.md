@@ -124,6 +124,12 @@ Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 - 잘못된 날짜를 반영한 모습<br/>
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/bbf26961-4c77-4618-b382-464fe446a990)<br/>
 - EDIT5의 오류 유형을 파악하기 위해 Gold, Silver Dataset에서 100개의 무작위 예측
-- 숫자와 날짜, hallucinates, 증거 왜곡의 유형으로 발생.
+- 숫자와 날짜, hallucinates, 증거 왜곡의 유형으로 발생.<br/>
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/76d523b6-3e8e-4a74-979d-7704b306772c)<br/>
+- 추가적인 제어로 모델의 성능을 개선할 수 있는 가능성이 있다.
+- Keskar et al. (2019) and Narayan et al. (2021)의 연구에 따라 special token을 이용한 상세한 instruction을 입력으로 추가.
+- 모델에게 문장 추가,복사,편집,제거할 것인지 추가나 편집 시 어떤 증거를 사용할 것인지 지시
+- 모든 지표에서 10% 정도의 성능 향상
+
 
 
