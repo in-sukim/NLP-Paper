@@ -97,4 +97,15 @@ ROUGE-N: unigram, bigram, trigram 등 문장 간 중복되는 n-gram을 비교�
 Baseline model로 T5(Raffel et al., 2020; Rothe et al., 2021) 사용.
 ### 4.1 Copy Baselines
 - **Copy Source**: 원본 기사 생성.
-- **Copy Source + Evidence**: 원본 기사 + 증거 조합. 구조화되지 않지 않은 테이블의 텍스트 데이터를 변환하기 위해 전통적인 선형화 방법(Lebret et al., 2016; Wiseman et al., 2017)을 적용. 행과 열 구분자를 사용하여 테이블 항목 분리.
+- **Copy Source + Evidence**: 원본 기사 + 증거 조합. <br/>구조화되지 않지 않은 테이블의 텍스트 데이터를 변환하기 위해 전통적인 선형화 방법(Lebret et al., 2016; Wiseman et al., 2017)을 적용. 행과 열 구분자를 사용하여 테이블 항목 분리.
+
+### 4.2 T5
+- T5 Copy Source
+- T5 + Copy Source + Evidence
+- 두 실험 모두 비구조화된 테이블 항목에서 텍스트 데이터를 변환하기 위해 선형화 방법 적용
+
+### 4.3 EDIT5
+- 압축된 출력 형식을 사용하여 전체 업데이트를 처음부터 쓸 필요없다.
+- Target 기사의 대부분의 텍스트는 원본 텍스트에서 복사되기 떄문에 복사된 문장을 식별할 수 있는 토큰을 대체
+- 모델이 입력에서 반복되는 시퀸스에 용량을 적게 할당할 수 있다.
+- 
