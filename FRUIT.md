@@ -46,3 +46,9 @@ Robert L. Logan IV, Alexandre Passos, Sameer Singh, Ming-Wei Chang
     - 생성된 내용이 Evidence와 업데이트된 기사의 정보를 얼마나 정확하게 반영하는지 평가하는 방법
     - **Unsupported Entity Tokens**
         - 생성된 Output에서 나타나는 Named Entity 중, 원본 텍스트,새로운 정보에는 없는 Named Entity의 평균 수를 측정: 높으면 신뢰성이 낮음.
+    - **Entity Precision and Recall**
+        - **Entity Precision**
+            - 생성된 텍스트에 포함된 Named Entity들이 원본 텍스트,새로운 정보에 실제로 존재하는지 측정
+            - 높은 정밀도는 텍스트 내의 Named Entity들이 원본 텍스트와 잘 일치함을 의미
+        - **Entity Recall**
+            - 원본 텍스트에 있는 Named Entity들이 
