@@ -7,4 +7,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 이 논문에서는  pixel-wise visual understanding을 위해 Osprey라는 mask-text instruction tuning approach 제안
   - integrating fine-grained mask regions into language instructions
 - Mask-based region-text dataset with 724K samples
-- Vision encoder: Convolutional CLIP backbone model -> pixel 수준의 representation 추출
+- Vision encoder backbone model: Convolutional CLIP<br/> -> 고해상도 입력에서 pixel 수준의 representation 추출
+- Segment Anything Model(SAM)와 통합하면 더 많은 역할 가능.
+
+## 1. Introduction
