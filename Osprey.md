@@ -34,3 +34,10 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - Multimodal large language models을 pixel-level instruction tuning이 가능하게 하는 "Osprey" 제안
 - mask-text pairs로 이루어진 Large-scale instruction tuning dataset "Osprey-724K" 구축
 - fine-grained visual understanding approach로서 다양한 region understanding task에서 SOTA 달성.
+
+## 1. Related Work
+- LLM을 통해 크게 발전된 NLP 연구는 훈련 데이터를 확장하고 모델 크기를 키우면서 MLLMs의 개발에 도움
+- CV 분야와의 결합을 통해  in-context learning 가능
+- 최근 연구는 visual instruction tuning을 위해 pre-trained LLM을 어떻게 활용할 수 있을지에 집중
+- 대표적인 모델들은 visual input encoding하기 위한 pre- trained visual backbone과 사용자 지시를 이해하고 응답을 생성하기 위한 LLM,<br/> 그리고 vision-language cross-modal connector로 이루어진 아키텍처.
+- Image-level에서는 좋은 성능을 보였지만, 특정 영역을 참조해야 하는 경우 제한적인 성능.
