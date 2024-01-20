@@ -53,3 +53,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/8bb56fcd-5326-42b4-bebd-0210371b6295" align="center" width="80%" height="70%"> 
 </p>
 
+### 3.1. Object-level Instructions
+- COCO, Ref-COCO, RefCOCO+, RefCOCOg 데이터의 경우 image-level에서 object-level의 caption 제공
+- 하지만 이러한 caption들은 짧고 의미 있는 맥락 정보를 포함하지 않아 MLLMs를 훈련하는데 적합하지 않음.
+- 이 문제를 해결하기 위해 object category, object type, object ac- tion, location, color, status 등의 정보를 담은 <br/>fine-grained region-based instruction data를 생성하는 파이프라인 구축
