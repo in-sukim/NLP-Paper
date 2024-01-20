@@ -57,7 +57,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - COCO, Ref-COCO, RefCOCO+, RefCOCOg 데이터의 경우 image-level에서 object-level의 caption 제공
 - 하지만 이러한 caption들은 짧고 의미 있는 맥락 정보를 포함하지 않아 MLLMs를 훈련하는데 적합하지 않음.
 - 이 문제를 해결하기 위해 object category, object type, object action, location, color, status 등의 정보를 담은 <br/>fine-grained region-based instruction data를 생성하는 파이프라인 구축
-- LLaVA-115K의 이미지에 대한 상세한 설명 스타일을 GPT-4와 같은 언어모델을 통해 COCO 이미지 데이터에 대한 새로운 설명과 대화 샘플 생성.
+- COCO 데이터에서 bounding box, region caption 정보를 사용하고, GPT-4와 같은 언어모델을 통해 LLaVA-115K에서 COCO 데이터와 유사한 상황을 자세하게 설명하는 description 결합하여 새로운 description과 대화 샘플 생성.
 - 이 과정에서 bounding box와 region caption 정보 사용. 총 197K개의 unique object- level mask-region instruction-following samples 수집
 
 ### 3.2. Part-level Instructions
