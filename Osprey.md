@@ -61,4 +61,9 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 이 과정에서 bounding box와 region caption 정보 사용. 총 197K개의 unique object- level mask-region instruction-following samples 수집
 
 ### 3.2. Part-level Instructions
-
+- PACO-LVIS 데이터셋은 75개 object의 456가지 특정 부분 클래스를 포함.
+- 색상, 패턴, 재료, 반사도 수준 등의 다양한 속성 포함. 이를 통해 object에 대한 자세한 이해 가능
+- GPT-4를 통해 QA 형식으로
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/180c044c-448a-475a-b249-d39284346712" align="center" width="60%" height="60%"> 
+</p>
