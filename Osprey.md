@@ -58,13 +58,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 하지만 이러한 caption들은 짧고 의미 있는 맥락 정보를 포함하지 않아 MLLMs를 훈련하는데 적합하지 않음.
 - 이 문제를 해결하기 위해 object category, object type, object action, location, color, status 등의 정보를 담은 <br/>fine-grained region-based instruction data를 생성하는 파이프라인 구축
 - LLaVA-115K의 이미지에 대한 상세한 설명 스타일을 GPT-4와 같은 언어모델을 통해 COCO 이미지 데이터에 대한 새로운 설명과 대화 샘플 생성.
-- 이 과정에서 bounding box와 region caption 정보 사용.
-<p align="center">  
-  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">
-  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/05e23fb2-c4f1-43ea-b2db-6d07370d9480" align="center" width="32%" >  
-  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/315f8d93-176c-4365-b2f3-cd4c2dcef854" align="center" width="32%">  
-  <figcaption align="center"> [Picture 1]: https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb<br/>[Picture 2]: https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K<br/>[Picture 3]: https://github.com/lichengunc/refer </figcaption></p>
+- 이 과정에서 bounding box와 region caption 정보 사용. 총 197K개의 unique object- level mask-region instruction-following samples 수집
 
-<img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/9e2a9620-f1a3-481f-9eca-9a409b8d804d" align="center" width="80%" height="70%"> 
-<figcaption align="center"> https://github.com/facebookresearch/paco </figcaption> 
+### 3.2. Part-level Instructions
 
