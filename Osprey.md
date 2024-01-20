@@ -62,5 +62,5 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
   <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
   <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
-  <figcaption align="center">3개 이미지 띄우기</figcaption></p>
-출처: https://0soo.tistory.com/227 [Lifealong:티스토리]
+  <figcaption align="center"> [Facebook]: https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb<br/>[Facebook]: https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb<br/>[Facebook]: https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb </figcaption></p>
+
