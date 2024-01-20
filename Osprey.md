@@ -64,7 +64,8 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/05e23fb2-c4f1-43ea-b2db-6d07370d9480" align="center" width="32%" >  
   <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/315f8d93-176c-4365-b2f3-cd4c2dcef854" align="center" width="32%">  
   <figcaption align="center"> [Picture 1]: https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocoDemo.ipynb<br/>[Picture 2]: https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K<br/>[Picture 3]: https://github.com/lichengunc/refer </figcaption></p>
-<p align="center">  
-  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/9e2a9620-f1a3-481f-9eca-9a409b8d804d" align="center" width="80%" height="70%"> 
-  <figcaption> https://github.com/facebookresearch/paco </figcaption>
-</p>
+
+<img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/9e2a9620-f1a3-481f-9eca-9a409b8d804d" align="center" width="80%" height="70%"> 
+<figcaption align="center"> https://github.com/facebookresearch/paco </figcaption> 
+
+
