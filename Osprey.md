@@ -44,7 +44,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - GPT4RoI, PVIT, Kosmos-2, Shikra, Ferret,GLaMM 등의 MLLMs에서는 region-based image 이해가 가능하게 했지만, <br/>bounding bax를 참조 영역으로 사용하여 정확하지 않은 region-text alignment를 야기할 수 있다.
 
 ## 3. Osprey-724K Dataset
-- 사전에 구성된 프롤프트 템플릿을 사용하여 GPT-4를 활용해 mask-text pair 생성.
+- 사전에 구성된 프롬프트 템플릿을 사용하여 GPT-4를 활용해 mask-text pair 생성.
 - response의 robustness와 flexibility를 위해 짧은 형식의 response formatting prompt와 함께 negative sample mining method 사용.<br/>
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/7b417bff-2b23-4905-a21d-f32e97372af0" align="center" width="80%" height="70%"> 
