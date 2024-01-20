@@ -65,7 +65,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 색상, 패턴, 재료, 반사도 수준 등의 다양한 속성 포함. 이를 통해 object에 대한 자세한 이해 가능
 - PACO-LVIS 데이터셋에서 추출된 정보를 토대로 Context를 입력으로 주고 사전에 정의된 질문들을 통해 QA 형식의 306K개의 데이터셋 구성
 <p align="center">
-  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/86794316-6db3-4898-9401-05b0084d697e" align="center" width="60%" height="60%"> 
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/2e953af9-00aa-441c-b591-98fa8805c663" align="center" width="60%" height="60%"> 
 </p>
 
 ### 3.3. Robustness and Flexibility
