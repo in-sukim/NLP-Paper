@@ -67,3 +67,6 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/86794316-6db3-4898-9401-05b0084d697e" align="center" width="60%" height="60%"> 
 </p>
+
+### 3.3. Robustness and Flexibility
+
