@@ -57,3 +57,10 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - COCO, Ref-COCO, RefCOCO+, RefCOCOg 데이터의 경우 image-level에서 object-level의 caption 제공
 - 하지만 이러한 caption들은 짧고 의미 있는 맥락 정보를 포함하지 않아 MLLMs를 훈련하는데 적합하지 않음.
 - 이 문제를 해결하기 위해 object category, object type, object ac- tion, location, color, status 등의 정보를 담은 <br/>fine-grained region-based instruction data를 생성하는 파이프라인 구축
+
+<p align="center">  
+  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
+  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
+  <img src="https://github.com/in-sukim/NLP-Paper/assets/43094223/b11064b4-d78f-4176-b209-eba94b3901e1" align="center" width="32%">  
+  <figcaption align="center">3개 이미지 띄우기</figcaption></p>
+출처: https://0soo.tistory.com/227 [Lifealong:티스토리]
