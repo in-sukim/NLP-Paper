@@ -14,4 +14,9 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 최근 LLaVA, MiniGPT-4, Otter, InstructBLIP 등과 같은 많은 MLLMs은 Instruction-following과 시각적 추론 능력에 대해 인상적인 결과를 보여주지만,<br/>
 대부분 Image-level에서 image-text pair 사용하여 region-level에서 region classification, captioning, reasoning 능력 부족.
 
-region-level에서의 능력을 향상시키기 위해 Kosmos-2, Shikra, PVIT, GPT4RoI 및 GLaMM등의 최근 실험에서는 bounding box 경계를 설정하고 <br/>object-level에서 공간적 특징을 활용하여 visual instruction tuning을 시도. 그러나 sparse bounding box를 사용하게 되면 
+region-level에서의 능력을 향상시키기 위해 Kosmos-2, Shikra, PVIT, GPT4RoI 및 GLaMM등의 최근 실험에서는 bounding box 경계를 설정하고 <br/>object-level에서 공간적 특징을 활용하여 visual instruction tuning을 시도. 그러나 sparse bounding box를 사용하게 되면 관계없는 배경 feature를 포함하게 되고, LLM의 visual instruction을 위한 region-text pair alignment의 부정확성을 야기할 수 있다.<br/>
+
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/5c3de6cc-3f3a-4515-a2be-4aac96a0a921" align="center" width="50%" height="50%"> 
+</p>
+
