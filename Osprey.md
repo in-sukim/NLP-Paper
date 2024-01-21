@@ -6,6 +6,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 하지만 현재의 MLLMs는 image-level이나 box-level의 이해에 초점, pixel level에서 세밀한 vision-language alignment을 갖추기에는 부족함.
 - 이 논문에서는  pixel-wise visual understanding을 위해 Osprey라는 mask-text instruction tuning approach 제안
   - integrating fine-grained mask regions into language instructions
+ 
 - Mask-based region-text dataset with 724K samples
 - **Vision encoder backbone model: Convolutional CLIP**<br/> -> 고해상도 입력에서 pixel 수준의 representation 추출
 - Segment Anything Model(SAM)와 통합하면 더 많은 역할 가능.
@@ -25,6 +26,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 세밀한 visual mask extractor를 통해 추출한 시각적 특성을 language instructions과 함께 교차 결합하여 LLM의 input sequence로 사용.
 - 고해상도 Input의 사용을 용이하게 하기 위해 Vision Encoder backbone model로 CLIP을 사용.
 - Convoutional CLIP은 효율성과 강건함을 유지하면서 더 큰 입력 해상도에 대한 일반화 성능 우수.
+
 - **Osprey-724K Dataset:** large- scale mask-based region-text dataset. 상세한 설명과 대화뿐만 아니라 풍부한 속성 정보도 포함<br/>
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/d4d77b61-de7c-4e8b-b8c1-09ec5aeebf75" align="center" width="50%" height="50%"> 
@@ -39,6 +41,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - 최근 연구는 visual instruction tuning을 위해 pre-trained LLM을 어떻게 활용할 수 있을지에 집중
 - 대표적인 모델들은 visual input encoding을 위한 pre- trained visual backbone과 사용자 지시를 이해하고 응답을 생성하기 위한 LLM,<br/> 그리고 vision-language cross-modal connector로 이루어진 아키텍처.
 - Image-level에서는 좋은 성능을 보였지만, 특정 영역을 참조해야 하는 경우 제한적인 성능.
+  
 - Segment Anything Model (SAM)은 zero-shot 상태에서 뛰어난 segmentation 성능을 보였지만, vanilla SAM 모델은 semantic label 제공 못함.
 - SEEM, HIPIE, Semantic SAM 등 다양한 접근 방식을 통해 확장된 모델들은 category를 예측할 수 있지만 색상, 위치, 설명을 하지 못해 실제 응용해서 사용하기에는 부족.
 - GPT4RoI, PVIT, Kosmos-2, Shikra, Ferret,GLaMM 등의 MLLMs에서는 region-based image 이해가 가능하게 했지만, <br/>bounding bax를 참조 영역으로 사용하여 정확하지 않은 region-text alignment를 야기할 수 있다.
@@ -57,6 +60,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - COCO, Ref-COCO, RefCOCO+, RefCOCOg 데이터의 경우 image-level에서 object-level의 caption 제공
 - 하지만 이러한 caption들은 짧고 의미 있는 맥락 정보를 포함하지 않아 MLLMs를 훈련하는데 적합하지 않음.
 - 이 문제를 해결하기 위해 object category, object type, object action, location, color, status 등의 정보를 담은 <br/>fine-grained region-based instruction data를 생성하는 파이프라인 구축
+  
 - COCO 데이터에서 bounding box, region caption 정보를 사용하고, GPT-4와 같은 언어모델을 통해 LLaVA-115K에서 COCO 데이터와 유사한 상황을 자세하게 설명하는 description과 결합하여 새로운 description과 대화 샘플 생성.
 - 총 197K개의 unique object- level mask-region instruction-following samples 수집
 
@@ -109,6 +113,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - $V_{ij}$를 linear projection layer $P_j$를 통해 전달하여 region-level embeddings 생성.
 - 다양한 이미지 레벨에서 얻은 representation Add(4개 레벨)
 - MLP layer 통과하여 visual mask token $t_i$ 생성
+  
 - 각 픽셀이 해당 객체 영역에 속하면 1 아니면 0을 나타내는 정보를 담은 binary mask $M$
 - 224x224 크기로 조정. Flatten하여 1차원 벡터로 변형. linear projection을 통해 spatial token $s_i$생성.
 - visual mask token $t_i$와 spatial token $s_i$ 결합하여 각 mask region에 대한 최종 임베딩 생성.
@@ -116,7 +121,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 
 ### 4.1.3 Tokenization for LLM Model
 - 이미지 내의 마스크 기반 영역을 처리하기 위해 special token "<region>" 사용
-- visual mask token $t_i$ = "<mask>", spatial token $s_i$ = "<position>"<br/> 마스크 영역과 텍스트가 잘 혼합되어 동일한 토큰화 공간에서 완전한 문장 형성
+- visual mask token $t_i$ = "\<mask>", spatial token $s_i$ = "\<position>"<br/> 마스크 영역과 텍스트가 잘 혼합되어 동일한 토큰화 공간에서 완전한 문장 형성
 - special token "<image>"은  vistion encoder에서 추출한 image-level embedding 대체
 - LLM으로는 LLaMA위에 instruction-tuned decoder-only LLM "Vicuna" 사용.
 
@@ -133,3 +138,6 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   - finetune the image-level projector,mask-based region feature extractor,LLM model
   - Osprey-724K 데이터셋 활용
   - Visual Genome (VG) 및 Visual Commonsense Reasoning (VCR) 데이터셋을 활용하여 다중 영역 이해 데이터를 추가
+  - HQ-SAM (High-Quality Synthetic Annotation Mask)를 통해 고품질 마스크 생성, 해당 mask에 대한 프롬프트 작성.
+ 
+## 5. Experiments
