@@ -70,6 +70,13 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 
 ### 3.3. Robustness and Flexibility
 #### Robustness
+- 이전 연구에서 MLLMs는 object hallucination문제가 있다는 것을 보여줬다.
+- 이를 완화하고자 Positive/Negative Sample을 구성.
+- 특정 영역이 특정 카테고리에 속하는지 여부를 질문하는 쿼리 -> "예/아니오"
+- "아니오"에 해당하는 경우를 Negative Sample에 해당.
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/52f59d62-85e6-4678-9cad-813ad54a559c" align="center" width="50%" height="50%"> 
+</p>
 #### Flexibility
 
 ## 4. Method of Osprey
