@@ -69,4 +69,8 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 </p>
 
 ### 3.3. Robustness and Flexibility
+#### Robustness
+#### Flexibility
 
+## 4. Method of Osprey
+### 4.1. Model Architecture
