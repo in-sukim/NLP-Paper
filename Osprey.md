@@ -102,10 +102,14 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 ### 4.1.2 Mask-Aware Visual Extractor
 - 각 object region의 pixel-level feature를 추출하기 위해 mask-aware visual extractor 제안.
 - mask-level에서 visual feature를 추출하는데 그치지 않고, 각 영역 $R_i$의 공간적인 위치 정보도 추출.
-- $V_{ij} = \mathcal{MP}(R_i,Z(x)_i).$
+- ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/18fb123e-f11d-4205-b35b-3ee9aa628dd9)
 - Vision Encoder 출력 feature map $Z(x)_i$에 대한 mask-pooling operation
 - $V_{ij}$는 객체 영역 $R_i$에 대한 해당 레벨 $j$의 시각적 특징. <br/>다중 레벨 특징을 활용하여 객체 영역의 다양한 시각적 특징을 종합적으로 분석하고 해당 객체에 대한 이해를 높인다.
-- ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/24261a9b-c8c5-4f74-88bb-b86743e057a3)
+- ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/1d1ec6ff-ccab-4b7b-b193-15557ec4d8f5)
 - $V_{ij}$를 linear projection layer $P_j$를 통해 전달하여 region-level embeddings 생성.
 - 다양한 이미지 레벨에서 얻은 representation Add(4개 레벨)
-- Sigmoid Function 통과
+- MLP layer 통과하여 visual mask token $t_i$ 생성
+- 각 픽셀이 해당 객체 영역에 속하면 1 아니면 0을 나타내는 정보를 담은binary mask $M$
+- 224x224 크기로 조정. Flatten하여 1차원 벡터로 변형. linear projection을 통해 spatial token $s_i$생성.
+- visual mask token $t_i$와 spatial token $s_i$ 결합하여 각 mask region에 대한 최종 임베딩 생성.
+- object region의 시각적 정보와 pixel-level spatial 정보를 통합하여 객체를 정확하게 인식하고 이해하는데 도움.
