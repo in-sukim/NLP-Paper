@@ -141,3 +141,26 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   - HQ-SAM (High-Quality Synthetic Annotation Mask)를 통해 고품질 마스크 생성, 해당 mask에 대한 프롬프트 작성.
  
 ## 5. Experiments
+### 5.2.1 Open-Vocabulary Segmentation
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/113e0977-d904-46d9-89ec-e397e74cd30f)
+
+### 5.2.2 Referring Object Classification
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/a7e7ac16-9a0d-49fb-9edc-b8a6d4bdedb5" align="center" width="50%" height="50%"> 
+</p>
+
+### 5.2.3 Detailed Region Description
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/d665dbb0-0da6-4073-bd66-ae10dc41f7c0" align="center" width="50%" height="50%"> 
+</p>
+
+### 5.2.4 Region Level Captioning
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/82f0aa9a-1358-4cae-9dd4-9d224a873ea0" align="center" width="50%" height="50%"> 
+</p>
+
+### 5.3. Ablation Study
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/e645579c-3214-43cf-a99a-7c03f505d43a" align="center" width="50%" height="50%">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/d28810d1-4bfe-4d8d-a035-bebdb37ec063" align="center" width="50%" height="50%">
+</p>
