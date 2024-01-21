@@ -121,12 +121,14 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - LLM으로는 LLaMA위에 instruction-tuned decoder-only LLM "Vicuna" 사용.
 
 ### 4.2. Training
-- Stage 1: Image-Text Alignment Pre-training
+- **Stage 1: Image-Text Alignment Pre-training**
   - image-text feature alignment를 위해 image-level feature와 language connector(MLP(Multi-Layer Perceptron)를 학습
-  - image-level projector is trained, vision encoder and LLM are kept frozen
-- Stage 2: Mask-Text Alignment Pre-training
-  - Mask-Aware Visual Extractor를 추가하여 픽셀 수준의 영역 특성을 추출, 훈련
-- Stage 3: End-to-End Fine-tuning
+  - image-level projector is trained, vision encoder and LLM are kept frozen<br/>
+  
+- **Stage 2: Mask-Text Alignment Pre-training**
+  - Mask-Aware Visual Extractor를 추가하여 픽셀 수준의 영역 특성을 추출, 훈련<br/>
+  
+- **Stage 3: End-to-End Fine-tuning**
   - vision encoder weights fixed
   - finetune the image-level projector,mask-based region feature extractor,LLM model
   - Osprey-724K 데이터셋 활용
