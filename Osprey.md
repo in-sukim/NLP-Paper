@@ -70,10 +70,14 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 
 ### 3.3. Robustness and Flexibility
 #### Robustness
-- 이전 연구에서 MLLMs는 object hallucination문제가 있다는 것을 보여줬다.
+- 이전 연구에서 MLLMs는 object hallucination문제 발견.
 - 이를 완화하고자 Positive/Negative Sample을 구성.
 - 특정 영역이 특정 카테고리에 속하는지 여부를 질문하는 쿼리 -> "예/아니오"
 - "아니오"에 해당하는 경우를 Negative Sample에 해당.
+- 공간적으로 가장 가까운 obejct의 카테고리를 식별하게 하여 어떤 객체가 다른 객체와 가까이 위치해 있는지 파악하고, 객체 간의 공간 관계를 이해하는 도움.
+- negative 카테고리는 target class name과 높은 semantic similarities를 가진 카테고리로 선택.
+- SentenceBert 기법을  통해 semantic similarities 평가
+- 모델이 특정 카테고리를 잘못 인식하는 문제를 완화하는 데 도움. 후보 상위 8 개 중 하나를 임의로 선택.
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/52f59d62-85e6-4678-9cad-813ad54a559c" align="center" width="50%" height="50%"> 
 </p>
