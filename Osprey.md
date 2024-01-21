@@ -78,10 +78,20 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - negative 카테고리는 target class name과 높은 semantic similarities를 가진 카테고리로 선택.
 - SentenceBert 기법을  통해 semantic similarities 평가
 - 모델이 특정 카테고리를 잘못 인식하는 문제를 완화하는 데 도움. 후보 상위 8 개 중 하나를 임의로 선택.
+- LVIS 데이터셋에도 이러한 방법을 적용하여 동작.
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/52f59d62-85e6-4678-9cad-813ad54a559c" align="center" width="50%" height="50%"> 
 </p>
-#### Flexibility
 
+#### Flexibility
+- 짧은 형태의 response instruction 구성.
+- 간단한 답변을 요구할 때 질문 끝네 명시적으로 짧은 형태의 프롬프트 추가 
 ## 4. Method of Osprey
 ### 4.1. Model Architecture
+- Osprey는 image-level vision encoder, pixel-level mask-aware visual extractor, LLM으로 구성.
+
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/cdb886d5-33e0-4fab-bb99-2a6a3c051605" align="center" width="70%" height="70%"> 
+</p>
+
+### 4.1.1 Convolutional CLIP Vision Encoder
