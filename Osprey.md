@@ -95,3 +95,11 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 </p>
 
 ### 4.1.1 Convolutional CLIP Vision Encoder
+- ViT 기반 CLIP 모델은 224x224 또는 336x336의 해상도 채택. 그러나 이러한 해상도에서 픽셀 수준의 representations를 사용하여 fine-grained image understanding 어려움.
+- 이를 해결하기 위해 convolutional CLIP model(ResNet, ConvNeXt) 도입.
+- 다양한 input 해상도에서 높은 일반화 성능.
+
+### 4.1.2 Mask-Aware Visual Extractor
+- 각 object region의 pixel-level feature를 추출하기 위해 mask-aware visual extractor 제안.
+- mask-level에서 visual feature를 추출하는데 그치지 않고, 각 영역 $R_i$의 공간적인 위치 정보도 추출.
+- 
