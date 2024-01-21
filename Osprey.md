@@ -105,4 +105,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - $V_{ij} = \mathcal{MP}(R_i,Z(x)_i).$
 - Vision Encoder 출력 feature map $Z(x)_i$에 대한 mask-pooling operation
 - $V_{ij}$는 객체 영역 $R_i$에 대한 해당 레벨 $j$의 시각적 특징. <br/>다중 레벨 특징을 활용하여 객체 영역의 다양한 시각적 특징을 종합적으로 분석하고 해당 객체에 대한 이해를 높인다.
-- $\sum_{k=1}^{n}$
+- ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/24261a9b-c8c5-4f74-88bb-b86743e057a3)
+- $V_{ij}$를 linear projection layer $P_j$를 통해 전달하여 region-level embeddings 생성.
+- 다양한 이미지 레벨에서 얻은 representation Add(4개 레벨)
+- Sigmoid Function 통과
