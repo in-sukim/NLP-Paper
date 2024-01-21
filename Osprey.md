@@ -119,3 +119,15 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - visual mask token $t_i$ = "<mask>", spatial token $s_i$ = "<position>"<br/> 마스크 영역과 텍스트가 잘 혼합되어 동일한 토큰화 공간에서 완전한 문장 형성
 - special token "<image>"은  vistion encoder에서 추출한 image-level embedding 대체
 - LLM으로는 LLaMA위에 instruction-tuned decoder-only LLM "Vicuna" 사용.
+
+### 4.2. Training
+- Stage 1: Image-Text Alignment Pre-training
+  - image-text feature alignment를 위해 image-level feature와 language connector(MLP(Multi-Layer Perceptron)를 학습
+  - image-level projector is trained, vision encoder and LLM are kept frozen
+- Stage 2: Mask-Text Alignment Pre-training
+  - Mask-Aware Visual Extractor를 추가하여 픽셀 수준의 영역 특성을 추출, 훈련
+- Stage 3: End-to-End Fine-tuning
+  - vision encoder weights fixed
+  - finetune the image-level projector,mask-based region feature extractor,LLM model
+  - Osprey-724K 데이터셋 활용
+  - Visual Genome (VG) 및 Visual Commonsense Reasoning (VCR) 데이터셋을 활용하여 다중 영역 이해 데이터를 추가
