@@ -44,7 +44,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
   
 - Segment Anything Model (SAM)은 zero-shot 상태에서 뛰어난 segmentation 성능을 보였지만, vanilla SAM 모델은 semantic label 제공 못함.
 - SEEM, HIPIE, Semantic SAM 등 다양한 접근 방식을 통해 확장된 모델들은 category를 예측할 수 있지만 색상, 위치, 설명을 하지 못해 실제 응용해서 사용하기에는 부족.
-- GPT4RoI, PVIT, Kosmos-2, Shikra, Ferret,GLaMM 등의 MLLMs에서는 region-based image 이해가 가능하게 했지만, <br/>bounding bax를 참조 영역으로 사용하여 정확하지 않은 region-text alignment를 야기할 수 있다.
+- GPT4RoI, PVIT, Kosmos-2, Shikra, Ferret,GLaMM 등의 MLLMs에서는 region-based image 이해가 가능하게 했지만, <br/>bounding box를 참조 영역으로 사용하여 정확하지 않은 region-text alignment를 야기할 수 있다.
 
 ## 3. Osprey-724K Dataset
 - 사전에 구성된 프롬프트 템플릿을 사용하여 GPT-4를 활용해 mask-text pair 생성.
