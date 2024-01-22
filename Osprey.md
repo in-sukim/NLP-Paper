@@ -89,7 +89,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 
 #### Flexibility
 - 짧은 형태의 response instruction 구성.
-- 간단한 답변을 요구할 때 질문 끝네 명시적으로 짧은 형태의 프롬프트 추가 
+- 간단한 답변을 요구할 때 질문 끝에 명시적으로 짧은 형태의 프롬프트 추가 
 ## 4. Method of Osprey
 ### 4.1. Model Architecture
 - Osprey는 image-level vision encoder, pixel-level mask-aware visual extractor, LLM으로 구성.
