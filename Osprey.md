@@ -24,7 +24,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 
 - 세밀한 픽셀 수준의 이해를 위해 MLLMs의 능력을 확장할 수 있는 "**Osprey**" 제안
 - 세밀한 visual mask extractor를 통해 추출한 시각적 특성을 language instructions과 함께 교차 결합하여 LLM의 input sequence로 사용.
-- 고해상도 Input의 사용을 용이하게 하기 위해 Vision Encoder backbone model로 CLIP을 사용.
+- 고해상도 Input의 사용을 용이하게 하기 위해 Vision Encoder backbone model로 Convoutional CLIP을 사용.
 - Convoutional CLIP은 효율성과 강건함을 유지하면서 더 큰 입력 해상도에 대한 일반화 성능 우수.
 
 - **Osprey-724K Dataset:** large- scale mask-based region-text dataset. 상세한 설명과 대화뿐만 아니라 풍부한 속성 정보도 포함<br/>
