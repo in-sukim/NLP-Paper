@@ -120,9 +120,9 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 - object region의 시각적 정보와 pixel-level spatial 정보를 통합하여 객체를 정확하게 인식하고 이해하는데 도움.
 
 ### 4.1.3 Tokenization for LLM Model
-- 이미지 내의 마스크 기반 영역을 처리하기 위해 special token "<region>" 사용
+- 이미지 내의 마스크 기반 영역을 처리하기 위해 special token "\<region>" 사용
 - visual mask token $t_i$ = "\<mask>", spatial token $s_i$ = "\<position>"<br/> 마스크 영역과 텍스트가 잘 혼합되어 동일한 토큰화 공간에서 완전한 문장 형성
-- special token "<image>"은  vistion encoder에서 추출한 image-level embedding 대체
+- special token "\<image>"은  vistion encoder에서 추출한 image-level embedding 대체
 - LLM으로는 LLaMA위에 instruction-tuned decoder-only LLM "Vicuna" 사용.
 
 ### 4.2. Training
