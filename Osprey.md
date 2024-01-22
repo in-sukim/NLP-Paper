@@ -33,7 +33,7 @@ Yuqian Yuan, Wentong Li, Jian Liu, Dongqi Tang, Xinjie Luo, Chi Qin, Lei Zhang, 
 </p>
 
 ### Contributions
-- Multimodal large language models을 pixel-level instruction tuning이 가능하게 하는 "Osprey" 제안
+- Multimodal large language model을 pixel-level instruction tuning이 가능하게 하는 "Osprey" 제안
 - mask-text pairs로 이루어진 Large-scale instruction tuning dataset "Osprey-724K" 구축
 - fine-grained visual understanding approach로서 다양한 region understanding task에서 SOTA 달성.
 
