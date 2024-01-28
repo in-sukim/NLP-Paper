@@ -26,12 +26,16 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 - Encoder로는 recurrent neural networks와 pre-trained language models
 - 다른 연구에서는 node classification 문제로 정의하고 graph neural networks를 적용하여 inter-sentence dependencies를 모델링.
-- 일부 연구에서는(Brown et al., 2020) LLM을 사용. (Goyal et al.2022)에서는 LLM의 경우가 ROUGE 점수는 낮지만 human evaluators은 오히려 선호하는 결과.
+- 일부 연구에서는(Brown et al., 2020) LLM을 사용. (Goyal et al.2022)에서는 LLM의 경우가 ROUGE 점수는 낮지만 human evaluators는 오히려 선호하는 결과.
 - 본 연구는 **ChatGPT의 추출적 요약**에 대한 **적용 가능성을 조사**하고, **추출적인 방법이 추상적 요약의 충실도를 향상시킬 수 있는지 검토**하는 것을 목표
 ## 3. Methods
 
 ### 3.1 Task Formulation
-
+- $n$개의 문장으로 구성된 문서 $d$가 주어졌을 때, Extractive summarization의 목표는 모델 $M$을 통해 요약 s를 구성하는 <br/>$m(m	\ll n)$개의 문장을 직접 추출하여 생성하는 것.
+- 대부분의 기존 연구에서는 sequence labeling problem으로 정의하며, 모델 $M$은 문장이 요약 s에 포함되어야 하는 확률에 기반하여 문장 선택.
+- $\hat{s}$ = arg max $pM$ (s|d).
+- Supervised summarization 모델 훈련에서는 greedy algorithm을 사용하여 extractive ground-truth labels<br/>(**ORACLE**:Optimal Recall Aware Learning for Extractive summarization)을 생성하는 것이 일반적.
+- gold summary와 비교하여 ROUGE 점수를 최대화하는 여러 문장을 선택.
 ### 3.2 In-context Learning
 
 ### 3.3 Extract-abstract Summarization
