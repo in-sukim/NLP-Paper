@@ -8,6 +8,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   
 ## 1. Introduction
 - Document summarization은 가장 중요한 정보를 보존하면서 text를 압축하는 것을 목표.
+  
 - 공개되는 텍스트 데이터의 양이 증가함에 따라, automatic summarization 접근 방식의 중요성 또한 중요해지고 있다.
 - **Summarization**
   - **Abstractive**: flexible 하고 redundant가 적은 이점이 있지만 문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
@@ -21,7 +22,12 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   -  ChatGP를 사용하여 extractive summarization을 위한 in-context learning, chain-of-thought reasoning 효과 실험.
   -  Extraction step을 abstractive summarization으로 확장, extract-then-generate framework를 통해 faithfulness 향상.
 ## 2. Related Work
+- 대부분의 연구에서는 Extractive summarization을 sequence classification 문제로 정의하고 sequential neural model과 다양한 encoder 적용.
 
+- Encoder로는 recurrent neural networks와 pre-trained language models
+- 다른 연구에서는 node classification 문제로 정의하고 graph neural networks를 적용하여 inter-sentence dependencies를 모델링.
+- 일부 연구에서는(Brown et al., 2020) LLM을 사용. (Goyal et al.2022)에서는 LLM의 경우가 ROUGE 점수는 낮지만 human evaluators은 오히려 선호하는 결과.
+- 본 연구는 **ChatGPT의 추출적 요약**에 대한 **적용 가능성을 조사**하고, **추출적인 방법이 추상적 요약의 충실도를 향상시킬 수 있는지 검토**하는 것을 목표
 ## 3. Methods
 
 ### 3.1 Task Formulation
