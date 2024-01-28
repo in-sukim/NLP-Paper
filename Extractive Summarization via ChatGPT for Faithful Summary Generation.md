@@ -55,6 +55,16 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - 본 논문에서는 extract-then-generate pipeline을 통해 LLM summary genration hallucination 문제를 완화하는 것을 목표.
 
 ## 4 Experiments and Analysis
+**Datasets**
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/1fda19dc-512b-4218-8f68-d2db440033d1)<br/>
+**Evaluation**
+- ROUGE: 요약 성능 평가
+- G-EVAL:GPT-based evaluation metric
+- FactCC: 요약의 faithfulness 평가
+- QuestEval: 요약의 faithfulness 평가
+- 50개의 dev set에서 best prompt를 선택하고 각 데이터셋의 test set에서 1000개의 예제를 무작위로 추출하여 평가. <br/>
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/3d07a354-462c-4145-82a9-391959902aa6)
+
 
 
 ### 4.1 Experiments and Analysis
