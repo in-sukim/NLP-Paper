@@ -15,7 +15,11 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - 최근 (Goyal et al., 2022)의 연구에서는 더 낮은 Rouge 점수에도 불구하고 인간 주석자들은 GPT-3가 생성한 텍스트를 선호하는 결과.
 - 인간이 작성한 뉴스 요약 결과와 LLM 모델의 결과가 비교 가능하다는 결과(Yang et al., 2023; Luo et al., 2023)
 - 하지만 이러한 연구들은 Abstractive Summarization 방식에 초점.
-- hallucination 문제를 해결하기 위해서라도 LLM을 활용한 Extracive summarization system에 대한 연구 필요성 강조.
+- hallucination 문제를 해결하기 위해서라도 LLM을 활용한 **Extracive summarization system**에 대한 연구 필요성 강조.
+- **Contributions**
+  - ChatGPT의 extractive summarization 방법에 대해 확장하고 그 성능을 평가한 최초의 시도. 
+  -  ChatGP를 사용하여 extractive summarization을 위한 n-context learning,chain-of-thought reasoning approaches 효과 실험.
+  -  Extraction step을 abstractive summarization으로 확장, extract-then-generate framework를 통해 faithfulness 향상.
 ## 2. Related Work
 
 ## 3. Methods
