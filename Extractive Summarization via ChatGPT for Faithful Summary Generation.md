@@ -70,7 +70,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 ### 4.1 Experiments and Analysis
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
-
+- Extractive, Abstractive 방법 모두 SOTA 모델보다 낮은 ROUGE 점수를 보이지만, G-EVAL에서는 더 높은 점수.
 ### 4.2 Experiment Settings
 
 ### 4.3 Extract Then Generate
