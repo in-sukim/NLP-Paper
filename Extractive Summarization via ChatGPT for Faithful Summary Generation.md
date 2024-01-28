@@ -38,8 +38,8 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 - Supervised summarization 모델 훈련에서는 greedy algorithm을 사용하여 extractive ground-truth labels<br/>(**ORACLE**:Optimal Recall Aware Learning for Extractive summarization)을 생성하는 것이 일반적.
 - gold summary와 비교하여 ROUGE 점수를 최대화하는 여러 문장을 선택.
-  - 한 번에 한 문장씩 요약에 점진적으로 추가되며, 현재 선택된 문장 집합의 Rouge 점수가 전체 gold summary에 대해 최대화.
-  - 남은 후보 문장 중 어느 것도 현재 요약에 추가했을 때 Rouge 점수가 향상되지 않을 때까지 진행
+  - 한 번에 한 문장씩 요약에 점진적으로 추가되며, 현재 선택된 문장 집합의 ROUGE 점수가 전체 gold summary에 대해 최대화.
+  - 남은 후보 문장 중 어느 것도 현재 요약에 추가했을 때 ROUGE 점수가 향상되지 않을 때까지 진행
   - 이렇게 선택된 문장 부분 집합을 추출적인 ground truth로 반환
 ### 3.2 In-context Learning
 - Large Language Model은 다양한 downstream task에서 강력한 few-shot 성능. 이를 in-context learning (ICL)이라 함.
