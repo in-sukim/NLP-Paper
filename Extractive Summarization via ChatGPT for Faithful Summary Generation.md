@@ -78,6 +78,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 
 ### 4.2 Experiments Results
+- ROUGE-1/2 점수는 요약의 정보성을 측정하는데 사용, ROUGE-L 점수는 요약의 유창성을 평가.
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
 - 상단 블록 MatchSum의 SOTA 점수 포함
 
