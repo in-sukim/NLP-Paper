@@ -68,6 +68,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 
 ### 4.1 Experiments and Analysis
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
 
 ### 4.2 Experiment Settings
 
