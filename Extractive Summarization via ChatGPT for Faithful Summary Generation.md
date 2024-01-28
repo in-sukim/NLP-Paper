@@ -58,7 +58,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/83d33da6-5839-4910-950a-d3cf05a93056)<br/>
 - 본 논문에서는 extract-then-generate pipeline을 통해 LLM summary genration hallucination 문제를 완화하는 것을 목표.
 
-## 4 Experiments and Analysis
+## 4. Experiments and Analysis
 
 ### 4.1 Experiment Settings
 **Datasets**<br/>
@@ -114,6 +114,6 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 </p>
 
 
-## 5 Conclusion
+## 5. Conclusion
 - 4개의 벤치마크 데이터셋을 기반으로 ChatGPT의 extractive summrization의 성능 평가.
 - 그 결과 강력한 잠재력, extract-generate framework를 사용하여 사실적인 요약을 생성할 수 있는 가능성
