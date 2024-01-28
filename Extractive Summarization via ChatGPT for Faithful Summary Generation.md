@@ -40,7 +40,11 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   - 남은 후보 문장 중 어느 것도 현재 요약에 추가했을 때 Rouge 점수가 향상되지 않을 때까지 진행
   - 이렇게 선택된 문장 부분 집합을 추출적인 ground truth로 반환
 ### 3.2 In-context Learning
-
+- Large Language Model은 다양한 downstream task에서 강력한 few-shot 성능. 이를 in-context learning (ICL)이라 함.
+- 일반적인 ICL prompt는 model $M$에게 $k$개의 document-summary pair의 예시를 주고, 문서에 대한 요약 $\hat{s}$를 예측하도록 하는 방식.
+- $\hat{s}$ = argmax $pM(s|d, {d^1,s^1)...(d^k,s^k)})$
+- 이전 연구들은 simple input-output pair 이외에도 설명과 chain-of-thought(COT)를 prompt에 포함시키는 것이 model에 benefit.
+- $\hat{s}$ = argmax $pM(s|d,C)$
 ### 3.3 Extract-abstract Summarization
 
 ## 4 Experiments and Analysis
