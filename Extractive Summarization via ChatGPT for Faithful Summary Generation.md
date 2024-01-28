@@ -10,8 +10,12 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - Document summarization은 가장 중요한 정보를 보존하면서 text를 압축하는 것을 목표.
 - 공개되는 텍스트 데이터의 양이 증가함에 따라, automatic summarization 접근 방식의 중요성 또한 중요해지고 있다.
 - **Summarization**
-  - **Abstractive**: flexible 하고 redundant가 적은 이점이 있지만문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
+  - **Abstractive**: flexible 하고 redundant가 적은 이점이 있지만 문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
   - **Extractive**: source document에서 직접 문장을 선택하여 문법적으로 맞고 source sentence에 faithful한 결과.
+- 최근 (Goyal et al., 2022)의 연구에서는 더 낮은 Rouge 점수에도 불구하고 인간 주석자들은 GPT-3가 생성한 텍스트를 선호하는 결과.
+- 인간이 작성한 뉴스 요약 결과와 LLM 모델의 결과가 비교 가능하다는 결과(Yang et al., 2023; Luo et al., 2023)
+- 하지만 이러한 연구들은 Abstractive Summarization 방식에 초점.
+- hallucination 문제를 해결하기 위해서라도 LLM을 활용한 Extracive summarization system에 대한 연구 필요성 강조.
 ## 2. Related Work
 
 ## 3. Methods
