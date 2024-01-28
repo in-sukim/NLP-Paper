@@ -8,7 +8,6 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   
 ## 1. Introduction
 - Document summarization은 가장 중요한 정보를 보존하면서 text를 압축하는 것을 목표.
-  
 - 공개되는 텍스트 데이터의 양이 증가함에 따라, automatic summarization 접근 방식의 중요성 또한 중요해지고 있다.
 - **Summarization**
   - **Abstractive**: flexible 하고 redundant가 적은 이점이 있지만 문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
@@ -23,7 +22,6 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   -  Extraction step을 abstractive summarization으로 확장, extract-then-generate framework를 통해 faithfulness 향상.
 ## 2. Related Work
 - 대부분의 연구에서는 Extractive summarization을 sequence classification 문제로 정의하고 sequential neural model과 다양한 encoder 적용.
-
 - Encoder로는 recurrent neural networks와 pre-trained language models
 - 다른 연구에서는 node classification 문제로 정의하고 graph neural networks를 적용하여 inter-sentence dependencies를 모델링.
 - 일부 연구에서는(Brown et al., 2020) LLM을 사용. (Goyal et al.2022)에서는 LLM의 경우가 ROUGE 점수는 낮지만 human evaluators는 오히려 선호하는 결과.
@@ -32,25 +30,23 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 ### 3.1 Task Formulation
 - $n$개의 문장으로 구성된 문서 $d$가 주어졌을 때, Extractive summarization의 목표는 모델 $M$을 통해 요약 s를 구성하는 <br/>$m(m	\ll n)$개의 문장을 직접 추출하여 생성하는 것.
-  
 - 대부분의 기존 연구에서는 sequence labeling problem으로 정의하며, 모델 $M$은 문장이 요약 s에 포함되어야 하는 확률에 기반하여 문장 선택.
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/27d63474-9930-4e23-9550-a8e26d47d9f1)
-
 - Supervised summarization 모델 훈련에서는 greedy algorithm을 사용하여 extractive ground-truth labels<br/>(**ORACLE**:Optimal Recall Aware Learning for Extractive summarization)을 생성하는 것이 일반적.
 - gold summary와 비교하여 ROUGE 점수를 최대화하는 여러 문장을 선택.
   - 한 번에 한 문장씩 요약에 점진적으로 추가되며, 현재 선택된 문장 집합의 ROUGE 점수가 전체 gold summary에 대해 최대화.
   - 남은 후보 문장 중 어느 것도 현재 요약에 추가했을 때 ROUGE 점수가 향상되지 않을 때까지 진행
   - 이렇게 선택된 문장 부분 집합을 추출적인 ground truth로 반환
+
 ### 3.2 In-context Learning
 - Large Language Model은 다양한 downstream task에서 강력한 few-shot 성능. 이를 in-context learning (ICL)이라 함.
-  
 - 일반적인 ICL prompt는 model $M$에게 $k$개의 document-summary pair의 예시를 주고, 문서에 대한 요약 $\hat{s}$를 예측하도록 하는 방식.
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/29b4bf76-9edb-4918-929d-dbefec397681)
-
 - 이전 연구들은 simple input-output pair 이외에도 설명과 chain-of-thought(COT)를 prompt에 포함시키는 것이 model에 benefit.
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/37286315-6544-4907-b7ae-37d3bae1bbb1)
 - $C = {(d^1,e^1,s^1)...(d^k,e^k,s^k)}$는 set of input-explanation-output
 - 본 논문에서는 zero-shot setting외에 extractive summarization에서 explanations의 유무에 따라 in-context learning 영향 실험.
+
 ### 3.3 Extract-abstract Summarization
 - Extractive summaries를 사용하여 Abstractive summary를 생성하는 과정
 - 1. 중요한 문장을 추출하여 Extractive summaries($s^E$) 생성.
