@@ -91,9 +91,26 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - COT 방법과 함께 패턴을 더 잘 이해할 수 있어 개선되는 결과.
 
 ### 4.3 Extract Then Generate
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/d760233f-ea31-4db9-821c-6ef65d5c2788)" align="center" width="70%" height="70%"> 
+</p>
 
-
+-  extract-then-generate framework의 효과를 검증.
+- factual consistency 크게 향상.
+- ChatGPT 기반 요약에서는 summary에 new content를 만드는 경향
+- 하지만 extract-then-generate framework는 문서로부터 추출된 중요한 문장을 활용하여 이러한 경향을 효과적으로 완화.
+- ORACLE을 활용한 경우와 유사한 summary faithfulness 개선을 보여줌.
+- ORACLE-Abs을 사용한 경우가 ChatGPUT의 ROUGE 점수 측면에서 가장 크게 향상.
+- extract-then-generate framework의 경우 extractive summaries의 성능에 크게 의존
+  - summary faithfulness를 효과적으로 개선하면 더 나은 성능.
+  
 ### 4.4 Positional Bias
+- extractive summarization의 Lead bias
+  - 뉴스 분야: 기사 초반부 가장 중요한 정보를 포함하는 경우 많다.
+  - LLM들이 extractive summarization에서 문장의 위치와 같은 superficial features에 의존할 수 있다.
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/fb12eae0-0fe3-4acf-9ff5-0f3def9e0259" align="center" width="40%" height="40%"> 
+</p>
 
 
 ## 5 Conclusion
