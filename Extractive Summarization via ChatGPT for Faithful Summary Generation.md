@@ -114,3 +114,5 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 
 ## 5 Conclusion
+- 4개의 벤치마크 데이터셋을 기반으로 ChatGPT의 extractive summrization의 성능 평가.
+- 그 결과 강력한 잠재력, extract-generate framework를 사용하여 사실적인 요약을 생성할 수 있는 가능성
