@@ -9,9 +9,9 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 ## 1. Introduction
 - Document summarization은 가장 중요한 정보를 보존하면서 text를 압축하는 것을 목표.
 - 공개되는 텍스트 데이터의 양이 증가함에 따라, automatic summarization 접근 방식의 중요성 또한 중요해지고 있다.
-- Summarization
-  - Abstractive: lexible 하고 redundant가 적은 이점이 있지만문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
-  - Extractive: source document에서 직접 문장을 선택하여 문법적으로 맞고 source sentence에 faithful한 결과.
+- **Summarization**
+  - **Abstractive**: flexible 하고 redundant가 적은 이점이 있지만문법에 맞지 않거나 사실이 아닌 내용을 생성할 수 있다.
+  - **Extractive**: source document에서 직접 문장을 선택하여 문법적으로 맞고 source sentence에 faithful한 결과.
 ## 2. Related Work
 
 ## 3. Methods
