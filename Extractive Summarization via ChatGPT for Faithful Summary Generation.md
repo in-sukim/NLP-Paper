@@ -70,7 +70,15 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 ### 4.1 Experiments and Analysis
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
+- 상단 블록 MatchSum의 SOTA 점수 포함
+- 하단 블록 BRIO의 SOTA 점수 포함
 - Extractive, Abstractive 방법 모두 SOTA 모델보다 낮은 ROUGE 점수를 보이지만, G-EVAL에서는 더 높은 점수.
+  - CNN/DM, PubMed에서 높은 성능, 다른 두개의 abstractive dataset에서는 낮은 성능
+  - 이러한 결과는 데이터셋의 reference summaries의 편향과 ROUGE 점수의 한계 때문.
+- ChatGPT와 SOTA 모델간의 ROUGE 점수의 차이가 extractive 세팅일 때 더 적다.
+- in-context learning과 reasoning은 extractive summarization에 좋은 영향.
+- XSum 데이터에서만 in-context learning 성능 저하 관찰. XSum 데이터셋의 짧은 ORACLE 특성 때문.
+- COT 방법과 함께 패턴을 더 잘 이해할 수 있어 개선되는 결과.
 ### 4.2 Experiment Settings
 
 ### 4.3 Extract Then Generate
