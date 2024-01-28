@@ -15,12 +15,12 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 ### 3.3 Extract-abstract Summarization
 
-## 4 
+## 4 Experiments and Analysis
 
 
 ### 4.1 Experiments and Analysis
 
-### 4.2 Experiments Results
+### 4.2 Experiment Settings
 
 ### 4.3 Extract Then Generate
 
