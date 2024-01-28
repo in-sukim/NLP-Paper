@@ -32,8 +32,10 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 
 ### 3.1 Task Formulation
 - $n$개의 문장으로 구성된 문서 $d$가 주어졌을 때, Extractive summarization의 목표는 모델 $M$을 통해 요약 s를 구성하는 <br/>$m(m	\ll n)$개의 문장을 직접 추출하여 생성하는 것.
+  
 - 대부분의 기존 연구에서는 sequence labeling problem으로 정의하며, 모델 $M$은 문장이 요약 s에 포함되어야 하는 확률에 기반하여 문장 선택.
-- $\hat{s}$ = arg max $pM$ (s|d).
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/27d63474-9930-4e23-9550-a8e26d47d9f1)
+
 - Supervised summarization 모델 훈련에서는 greedy algorithm을 사용하여 extractive ground-truth labels<br/>(**ORACLE**:Optimal Recall Aware Learning for Extractive summarization)을 생성하는 것이 일반적.
 - gold summary와 비교하여 ROUGE 점수를 최대화하는 여러 문장을 선택.
   - 한 번에 한 문장씩 요약에 점진적으로 추가되며, 현재 선택된 문장 집합의 Rouge 점수가 전체 gold summary에 대해 최대화.
@@ -41,10 +43,12 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
   - 이렇게 선택된 문장 부분 집합을 추출적인 ground truth로 반환
 ### 3.2 In-context Learning
 - Large Language Model은 다양한 downstream task에서 강력한 few-shot 성능. 이를 in-context learning (ICL)이라 함.
+  
 - 일반적인 ICL prompt는 model $M$에게 $k$개의 document-summary pair의 예시를 주고, 문서에 대한 요약 $\hat{s}$를 예측하도록 하는 방식.
-- $\hat{s}$ = argmax $pM(s|d, {d^1,s^1)...(d^k,s^k)})$
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/29b4bf76-9edb-4918-929d-dbefec397681)
+
 - 이전 연구들은 simple input-output pair 이외에도 설명과 chain-of-thought(COT)를 prompt에 포함시키는 것이 model에 benefit.
-- $\hat{s}$ = argmax $pM(s|d,C)$
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/37286315-6544-4907-b7ae-37d3bae1bbb1)
 - $C = {(d^1,e^1,s^1)...(d^k,e^k,s^k)}$는 set of input-explanation-output
 - 본 논문에서는 zero-shot setting외에 extractive summarization에서 explanations의 유무에 따라 in-context learning 영향 실험.
 ### 3.3 Extract-abstract Summarization
@@ -55,8 +59,13 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - 본 논문에서는 extract-then-generate pipeline을 통해 LLM summary genration hallucination 문제를 완화하는 것을 목표.
 
 ## 4 Experiments and Analysis
-**Datasets**
-![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/1fda19dc-512b-4218-8f68-d2db440033d1)<br/>
+
+### 4.1 Experiment Settings
+**Datasets**<br/>
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/1fda19dc-512b-4218-8f68-d2db440033d1" align="center" width="40%" height="40%"> 
+</p>
+
 **Evaluation**
 - ROUGE: 요약 성능 평가
 - G-EVAL:GPT-based evaluation metric
@@ -68,9 +77,10 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 </p>
 
 
-### 4.1 Experiments and Analysis
+### 4.2 Experiments Results
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
 - 상단 블록 MatchSum의 SOTA 점수 포함
+
 - 하단 블록 BRIO의 SOTA 점수 포함
 - Extractive, Abstractive 방법 모두 SOTA 모델보다 낮은 ROUGE 점수를 보이지만, G-EVAL에서는 더 높은 점수.
   - CNN/DM, PubMed에서 높은 성능, 다른 두개의 abstractive dataset에서는 낮은 성능
@@ -79,7 +89,6 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - in-context learning과 reasoning은 extractive summarization에 좋은 영향.
 - XSum 데이터에서만 in-context learning 성능 저하 관찰. XSum 데이터셋의 짧은 ORACLE 특성 때문.
 - COT 방법과 함께 패턴을 더 잘 이해할 수 있어 개선되는 결과.
-### 4.2 Experiment Settings
 
 ### 4.3 Extract Then Generate
 
