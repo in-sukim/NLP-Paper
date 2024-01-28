@@ -63,8 +63,9 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - FactCC: 요약의 faithfulness 평가
 - QuestEval: 요약의 faithfulness 평가
 - 50개의 dev set에서 best prompt를 선택하고 각 데이터셋의 test set에서 1000개의 예제를 무작위로 추출하여 평가. <br/>
-![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/3d07a354-462c-4145-82a9-391959902aa6)
-
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/3d07a354-462c-4145-82a9-391959902aa6" align="center" width="50%" height="50%"> 
+</p>
 
 
 ### 4.1 Experiments and Analysis
