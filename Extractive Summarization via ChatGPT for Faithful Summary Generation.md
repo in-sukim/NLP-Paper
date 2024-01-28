@@ -45,6 +45,8 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - $\hat{s}$ = argmax $pM(s|d, {d^1,s^1)...(d^k,s^k)})$
 - 이전 연구들은 simple input-output pair 이외에도 설명과 chain-of-thought(COT)를 prompt에 포함시키는 것이 model에 benefit.
 - $\hat{s}$ = argmax $pM(s|d,C)$
+- $C = {(d^1,e^1,s^1)...(d^k,e^k,s^k)}$는 set of input-explanation-output
+- 본 논문에서는 zero-shot setting외에 extractive summarization에서 explanations의 유무에 따라 in-context learning 영향 실험.
 ### 3.3 Extract-abstract Summarization
 
 ## 4 Experiments and Analysis
