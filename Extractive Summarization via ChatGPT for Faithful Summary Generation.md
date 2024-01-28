@@ -77,8 +77,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - ROUGE-1/2 점수는 요약의 정보성을 측정하는데 사용, ROUGE-L 점수는 요약의 유창성을 평가.
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/fc173e78-4039-4748-9fa0-bd32cb0811b6)
 - 상단 블록 MatchSum의 SOTA 점수 포함
-
-- 하단 블록 BRIO의 SOTA 점수 포함
+- 하단 블록 BRIO(CNN/DM,XSum), SummaReranker(Reddit), GSum(PubMed)의 SOTA 점수 포함
 - Extractive, Abstractive 방법 모두 SOTA 모델보다 낮은 ROUGE 점수를 보이지만, G-EVAL에서는 더 높은 점수.
   - CNN/DM, PubMed에서 높은 성능, 다른 두개의 abstractive dataset에서는 낮은 성능
   - 이러한 결과는 데이터셋의 reference summaries의 편향과 ROUGE 점수의 한계 때문.
