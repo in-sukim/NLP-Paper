@@ -51,7 +51,8 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - Extractive summaries를 사용하여 Abstractive summary를 생성하는 과정
 - 1. 중요한 문장을 추출하여 Extractive summaries($s^E$) 생성.
 - 2. Extractive summaries를 사용하여 LLM에게 요약을 생성하도록 요청.<br/>
-![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/83d33da6-5839-4910-950a-d3cf05a93056)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/83d33da6-5839-4910-950a-d3cf05a93056)<br/>
+- 본 논문에서는 extract-then-generate pipeline을 통해 LLM summary genration hallucination 문제를 완화하는 것을 목표.
 
 ## 4 Experiments and Analysis
 
