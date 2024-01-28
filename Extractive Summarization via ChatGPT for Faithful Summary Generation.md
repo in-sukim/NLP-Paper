@@ -18,7 +18,7 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - hallucination 문제를 해결하기 위해서라도 LLM을 활용한 **Extracive summarization system**에 대한 연구 필요성 강조.
 - **Contributions**
   - ChatGPT의 extractive summarization 방법에 대해 확장하고 그 성능을 평가한 최초의 시도. 
-  -  ChatGP를 사용하여 extractive summarization을 위한 n-context learning,chain-of-thought reasoning approaches 효과 실험.
+  -  ChatGP를 사용하여 extractive summarization을 위한 in-context learning, chain-of-thought reasoning 효과 실험.
   -  Extraction step을 abstractive summarization으로 확장, extract-then-generate framework를 통해 faithfulness 향상.
 ## 2. Related Work
 
