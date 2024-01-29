@@ -86,6 +86,10 @@ Haopeng Zhang Xiao Liu Jiawei Zhang
 - XSum 데이터에서만 in-context learning 성능 저하 관찰. XSum 데이터셋의 짧은 ORACLE 특성 때문.
 - COT 방법과 함께 패턴을 더 잘 이해할 수 있어 개선되는 결과.
 
+<p align="center">
+  <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/40339f68-7338-4337-8f71-ae235b7e0701)" align="center" width="70%" height="70%"> 
+</p>
+
 ### 4.3 Extract Then Generate
 <p align="center">
   <img src= "https://github.com/in-sukim/NLP-Paper/assets/43094223/d760233f-ea31-4db9-821c-6ef65d5c2788)" align="center" width="70%" height="70%"> 
