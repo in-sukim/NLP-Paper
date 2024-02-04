@@ -10,7 +10,6 @@ Zineng Tang, Ziyi Yang, Guoxin Wang, Yuwei Fang, Yang Liu, Chenguang Zhu, Michae
 
 # 1. Introduction
 - diverse document type과 format에 따라 구조적으로 다른 위치에 분포하기 때문에 문서의 layout을 이해하는 것 중요.
-
 - text와 visual modalities 사이의 crossmodal interaction은 regular
 vision-language data보다 강하다
     - 문서 내의 텍스트가 이미지 안에 시각적으로 표현
