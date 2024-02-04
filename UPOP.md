@@ -128,8 +128,8 @@ vision-language data보다 강하다
 - **Text Characters Embeddings**는 Encoder를 통해 encode 되지 않는 trainable parameter.
 - Cross Attention은 linear computation complexity를 증가시키지만, **image generation quality**를 크게 높인다.
 #### (4.b) Image Decoding.
-- joint vision_text embedding은 non-masked image patch만 포함하기 때문에 Vision Decoder에 직접적으로 feeding할 수 없다.
-- 그렇기 떄문에 sequence of trainable **placeholder embedding**을 Vision Docoder에 feeding
+- joint vision_text embedding은 non-masked image patch만 포함하기 때문에 Vision Decoder에 직접적으로 feeding 할 수 없다.
+- 그렇기 때문에 sequence of trainable **placeholder embedding**을 Vision Docoder에 feeding
 - placeholder의 sequence 길이는 image patch의 개수와 동일.
 - input document image에서 image patch가 maksing 되어 있는지를 나타내기 위한 두가지 유형의 placeholder embedding 사용.
 ## 4.2. Supervised Pretraining Tasks
