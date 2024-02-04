@@ -46,7 +46,7 @@ vision-language data보다 강하다
 - unified learning objectives
 - **Vision-Text-Layout Transformer**
     - model architecture for text, vision, and layout
-- document image $v$가 주어졌을 때, OCR을 통해  문서 내 text token {$s^i$}인식, 각 text token에 대한 bounding box {($x^1_i, y^1_i, x^2_i, y^2_i$)}
+- document image $v$가 주어졌을 때, OCR을 통해  문서 내 text token { $s^i$ }인식, 각 text token에 대한 bounding box {($x^1_i, y^1_i, x^2_i, y^2_i$)}
 - Input: ![equation](https://github.com/in-sukim/NLP-Paper/assets/43094223/17c50855-57c7-4fd6-a0ec-e21e988069c1)<br/>
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/4afb478c-5e80-4195-9a2f-5c6b763c61a2)
 
