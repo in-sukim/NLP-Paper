@@ -84,7 +84,7 @@ vision-language data보다 강하다
 - **VTL decoder**는 vision, text, and layout modalities를 함께
 생성하도록 설계. text-layout decoder와 vision decoder로 구성.
 - **Text-layout decoder**
-    - generate text, layout token을 sequence-to-sequence로
+    - text, layout token을 sequence-to-sequence로
     생성하기 위한 uni-directional Transformer decoder
 - **Vision decoder**
     - masked autoencoder의 decoder를 채택하여 text와 layout information을 포함한 image pixel을 생성.
