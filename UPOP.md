@@ -63,7 +63,7 @@ vision-language data보다 강하다
     - $N = \frac{H}{P} \times \frac{W}{P}$
 - vocabulary 검색을 통해 $D$-dim numerical embedding $\{s_i\}_{i=1}^M$으로 변환.
 - **Layout-Induced Vision-Text Embedding.**<br/>
-    ![Alt text](image-2.png)
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/3f5c1dd8-e00a-43d7-a79f-13ddf2728560)
     - text token embedding $s_i$
     - indicator function $\phi$
     - joint representation $s'_i = s_i + v_j$, where $\phi(s_i, v_j) = 1.$
@@ -94,30 +94,30 @@ vision-language data보다 강하다
 # 4. Unified Generative Pretraining
 - task prompt을 포함한 universal generative task format을 만들어 다양한 training objectives와 dataset을 통합
 - pretrain UDOP on large-scale documents with and with-out human labels<br/>
-![Alt text](image-3.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/57b18304-ae0c-4219-a6b5-34ff113e5751)
 ## 4.1. Self-Supervised Pretraining Tasks
 -  unlabeled documents에 대한 self-supervised learning objectives 제안
 -  unlabeled document는 token-level bounding box와 document image를 포함한 OCR input
 - Example: “Ship Date to Retail: Week of March 14, 1994”
 - "Ship Date", "of" 두 단어 Maksing
 ### (1) Joint Text-Layout Reconstruction 
-![Alt text](image-4.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/69adff59-e880-4e7f-81d8-19728561dbd2)
 - layout 내 위치와 text를 예측해야 한다.
 
 ### (2) Layout Modeling
-![Alt text](image-7.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/9680022f-fd56-4319-80db-17b911ea9e68)
 - Document image와 context text가 주어졌을 때 text token의 위치 예측
 - masking ratio 75%로 큰 비율을 사용해 태스크가 너무 쉬워지지 않도록 설정.
 
 ### (3) Visual Text Recognition
-![Alt text](image-6.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/116b8b46-06ed-4cf8-aa05-e284a81ccc36)
 - image 내에서 text token의 위치가 주어졌을 때 text 예측
 - Masking ratio 50%
 - 제공된 bounding box 정보를 통해 image내에 text의 위치를 학습하고 bounding box를 (0,0,0,0)으로 설정하여 텍스트를 예측하는데 집중하도록 유도.
 - 이를 통해 이미지 내의 텍스트와 그 위치 사이의 상관관계를 이해하고, 시각적 정보와 텍스트 정보를 함께 포함하는 임베딩을 학습하도록 도움.
 
 ### (4) Masked Image Reconstruction with Text and Layout
-![Alt text](image-8.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/96d2643b-faf0-4c80-bcbc-93f1cad5a956)
 - Document image내에서 text와 layout을 사용하여 reconstruct image가 목표.
 - vision self- supervised learning을 위해 masked autoencoders(MAE) objective 채택
 - **masked autoencoders(MAE)**
@@ -223,39 +223,39 @@ vision-language data보다 강하다
     - Key information extraction(KLC, PWD, DeepForm)
     - Table QA/NLI(WTQ, TabFact)
     - prompt format: Section 4.2
-- **Results.**
-    ![Alt text](image-9.png)<br/>
-    ![Alt text](image-10.png)
+- **Results.**<br/>
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/71aea74c-2cd5-4bfb-a7f1-0c7e8803a946)<br/>
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/2ba8943e-4742-4539-a618-c9ef4e7b8c6b)
     - Pretrained model들을 평가 데이터를 통해 finetune
     - UDOP model 7개의 dataset에서 SOTA 달성.
-    - UPDP 모델은 open-vocabulary generative model로 모든 task에 one single model을 사용함에도 불구하고  task 별 네트워크를 활용한 분류 기반 각 baseline model보다 더 좋은 성능.
-    ![Alt text](image-11.png)
+    - UPDP 모델은 open-vocabulary generative model로 모든 task에 one single model을 사용함에도 불구하고  task 별 네트워크를 활용한 분류 기반 각 baseline model보다 더 좋은 성능.<br/>
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/d5dd8e9c-aaa2-4a75-ab6c-8bc699d649fb)
     - 이미지 해상도에 따른 Curriculum Learning 결과는 해상도가 높아질수록 성능이 향상되는 모습.
-    - 가장 낮은 해상도 224의 경우에도 이전 모델보다 높은 성능
-    ![Alt text](image-12.png)
+    - 가장 낮은 해상도 224의 경우에도 이전 모델보다 높은 성능<br/>
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/5b4fce44-bceb-4e1b-b626-125b7381467d)
     - UDOP 모델은 self-supervised objectives를 통해 훈련(224 해상도)
     - Joint Text-Layout, TVL Transformer 및 제안된 self-supervised objectives의 효과 입증.
 # 6. Analysis
 ## 6.1. Visualization Analysis
 - **Masked Image Reconstruction.**
-    ![Alt text](image-13.png)
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/f4ed2008-19ba-4b12-a7d2-4514d5a6b903)
     - 75%의 높은 masking 비율에도 불구하고 text와 laytout signal을 통해 문서 이미지를 고품질로 재구성.
 - **Document Generation & Editing.**
-    ![Alt text](image-14.png)
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/c579b2bb-2aae-4dd4-a4e0-ae9e34a5536c)
     - 고품질 문서 생성과 편집 가능
     - 생성된 content는 고해상도이며 글꼴, 크기, 스타일 및 방향을 원본과 일관성 있게 생성.
 - **Layout Customization**
-    ![Alt text](image-15.png)
+    ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/a354aa43-dd97-43e0-b40c-6ba6f557dc19)
     - 문서 레이아웃 편집을 수행 가능
     - 문서의 layout을 처음부터 재생성하여 편집
     - 일부 image patch를 유지하고, content의 bounding box를 변경한 후, 새로운 layout으로 문서 이미지를 재생성.
 
 ## 6.2. Ablation Analysis
-![Alt text](image-16.png)<br/>
-![Alt text](image-17.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/376a3c6d-a257-4c37-a01f-2c191fd8bf3c)<br/>
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/c33c4c93-896c-43bf-abc1-87414125d163)
 - text-based pretraining tasks의 성능 입증
 ## 6.3. Effectiveness of the Vision Modality
-![Alt text](image-18.png)
+![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/cc357b25-53dc-474d-8609-96b9b8bffbcf)
 - Vision Modalitiy를 추가했을 경우가 더 높은 성능
 # 7. Conclusion
 - Document 내 layout-induced vision-text representations의 강한  **spatial correlations**을 활용하여 **Vision-Text-Layout transformer**을 통해  **vision, text, layout modality를 통합**
