@@ -93,7 +93,7 @@ vision-language data보다 강하다
 - 두 decoder 모두 VTL encoder에 cross-attend 수행.
 # 4. Unified Generative Pretraining
 - task prompt을 포함한 universal generative task format을 만들어 다양한 training objectives와 dataset을 통합
-- pretrain UDOP on large-scale documents with and with-out human labels
+- pretrain UDOP on large-scale documents with and with-out human labels<br/>
 ![Alt text](image-3.png)
 ## 4.1. Self-Supervised Pretraining Tasks
 -  unlabeled documents에 대한 self-supervised learning objectives 제안
@@ -224,7 +224,7 @@ vision-language data보다 강하다
     - Table QA/NLI(WTQ, TabFact)
     - prompt format: Section 4.2
 - **Results.**
-    ![Alt text](image-9.png)
+    ![Alt text](image-9.png)<br/>
     ![Alt text](image-10.png)
     - Pretrained model들을 평가 데이터를 통해 finetune
     - UDOP model 7개의 dataset에서 SOTA 달성.
@@ -251,7 +251,7 @@ vision-language data보다 강하다
     - 일부 image patch를 유지하고, content의 bounding box를 변경한 후, 새로운 layout으로 문서 이미지를 재생성.
 
 ## 6.2. Ablation Analysis
-![Alt text](image-16.png)
+![Alt text](image-16.png)<br/>
 ![Alt text](image-17.png)
 - text-based pretraining tasks의 성능 입증
 ## 6.3. Effectiveness of the Vision Modality
