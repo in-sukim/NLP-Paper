@@ -116,7 +116,7 @@ vision-language data보다 강하다
 
 ### (4) Masked Image Reconstruction with Text and Layout
 ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/96d2643b-faf0-4c80-bcbc-93f1cad5a956)
-- Document image내에서 text와 layout을 사용하여 reconstruct image가 목표.
+- Document image내에서 text와 layout을 사용하여 image를 reconstruct 하는게 목표.
 - vision self- supervised learning을 위해 masked autoencoders(MAE) objective 채택
 - **masked autoencoders(MAE)**
     - image patch에서 일정 비율을 Masking하고 처리되지 않은 patch를 vision decoder에 입력.
