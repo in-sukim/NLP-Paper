@@ -34,7 +34,7 @@ vision-language data보다 강하다
 
 - **Document Artificial Intelligence.**
     - **LayoutLM**: masked language modeling과 document classification task를 통해 2D positional information과 image embeddings이 통합된 문서에 대해 BERT 모델 pretrain
-    - **Visual-Language BERT** 유사한 아키텍처를 채택, masked image/region modeling 제안. layout 정보에서 읽는 순서를 활용
+    - **Visual-Language BERT**와 유사한 아키텍처를 채택, masked image/region modeling 제안. layout 정보에서 읽는 순서를 활용
     - CNN을 통해 추출한 region feature와 sentence-level text representation을 사용하여 **multimodal encoder** 모델링, **self-supervised objectives**로 훈련.
     - OCR을 사용하지 않고 document image에서 textual output generate
     - generative training objectives를 사용하여 **un-labeled,labeled document data**에서 **generative language model** 훈련.
