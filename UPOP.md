@@ -171,11 +171,11 @@ vision-language data보다 강하다
     - **unified encoder**와 **text-layout decoder**는 **T5-large encoder-decoder 아키텍처**
     - **vision decoder**는 **MAE-large decoder 아키텍처**
     - **794M** trainable parameters
-    - **T5 tokenizer and** embedding from **Hugging Face Transformers**
+    - **T5 tokenizer** and embedding from **Hugging Face Transformers**
     - **extend the vocabulary** to accommodate **special tokens**(e.g., new sentinel and layout tokens)
 
 - **Data.**
-    - self-supervised learnin을 위해 larget-scale document collections IIT-CDIP Test Collection 1.0 사용.
+    - self-supervised learning을 위해 larget-scale document collections IIT-CDIP Test Collection 1.0 사용.
     - OCR에 의해 추출된 text, token-level bounding box를 포함한 1100만개의 스캔된 문서
 
 - **Curriculum Learning**
