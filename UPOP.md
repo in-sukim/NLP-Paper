@@ -226,7 +226,7 @@ vision-language data보다 강하다
     ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/2ba8943e-4742-4539-a618-c9ef4e7b8c6b)
     - Pretrained model들을 평가 데이터를 통해 finetune
     - UDOP model 7개의 dataset에서 SOTA 달성.
-    - UPDP 모델은 open-vocabulary generative model로 모든 task에 one single model을 사용함에도 불구하고  task 별 네트워크를 활용한 분류 기반 각 baseline model보다 더 좋은 성능.<br/>
+    - UDOP 모델은 open-vocabulary generative model로 모든 task에 one single model을 사용함에도 불구하고  task 별 네트워크를 활용한 분류 기반 각 baseline model보다 더 좋은 성능.<br/>
     ![image](https://github.com/in-sukim/NLP-Paper/assets/43094223/d5dd8e9c-aaa2-4a75-ab6c-8bc699d649fb)
     - 이미지 해상도에 따른 Curriculum Learning 결과는 해상도가 높아질수록 성능이 향상되는 모습.
     - 가장 낮은 해상도 224의 경우에도 이전 모델보다 높은 성능<br/>
